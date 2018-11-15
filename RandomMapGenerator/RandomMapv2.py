@@ -92,10 +92,7 @@ monsterColor = askcolor(color = (255,0,0), title="Color of Monster")
 for i in range(mapGrid.x):
     for j in range(mapGrid.y):
         if maxTreasure > 0:
-            if RMv2.treasureCheck(i,j,mapGrid)==True and mapGrid.mapGrid[i][j] == 0:
-                treasureChance = RMv2.random.randint(1,20)
-                if treasureChance == 20:
-                    mapGrid.mapGrid[i][j] = 2
+            if RMv2.treasureCheck(i,j,mapGrid)==True:
                     maxTreasure -= 1
         else:
             break

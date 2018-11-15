@@ -70,6 +70,7 @@ def outBounds(row,col,mapGrid):
 
 ### treasureCheck ###
 #takes current [row,col] and mapGrid object, then checks adjacent directions for validity
+#if valid, sets current mapGrid to 2 (treasure)
 #returns true if 7 adjacent cells are walls, else returns false or if current cell is bounds
 def treasureCheck(row,col,mapGrid):
     #directions =   up    down  left right    NW    NE     SW      SE
@@ -90,9 +91,13 @@ def treasureCheck(row,col,mapGrid):
                         wallCount+=1
                 except IndexError:
                     break
-                #if wallCount reaches 6, this is a relatively isolated portion of path
+                #if wallCount reaches 6, this is a relatively isolated portion of path, so there should be treasure!
                 if wallCount >= 6:
                     #print("yay")
+                    if mapGrid.mapGrid[x][y] == 0:
+                        treasureChance = random.randint(1,20)
+                        if treasureChance == 20:
+                            mapGrid.mapGrid[x][y] = 2 #***is it better practice to modify the mapGrid object in main, or in this function? what are the drawbacks/benefits of either?
                     return True
         else:
             return False

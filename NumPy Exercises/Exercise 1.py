@@ -103,3 +103,50 @@ import numpy as np
 #print(a)
 #print(len(a))
 
+## Exercise 22
+#a = np.arange(0)
+#a[(a >= 9) & (a <= 15)] *= -1
+#print(a)
+
+## Exercise 23
+#a = np.random.randint(5,11,5)
+#print(a)
+
+## Exercise 24
+#a = np.random.randint(2,6,5)
+#b = np.random.randint(2,6,5)
+#print(a)
+#print(b)
+#print(a*b)
+
+## Exercise 25
+#a = np.arange(10,22).reshape(3,4)
+#print(a)
+
+## Exercise 26
+#a = np.arange(10,22).reshape(3,4)
+#print(a.shape)
+
+## Exercise 27
+#a = np.eye(3)
+#print(a)
+
+## Exercise 28
+#a = np.ones((10,10),int)
+#a[1:-1,1:-1] = 0
+#print(a)
+
+## Exercise 29
+#a = np.zeros((5,5),int)
+#np.fill_diagonal(a,[1,2,3,4,5])
+#b = np.diag([1,2,3,4,5])#diag extracts OR creates diagonal matrices
+#diagonal extracts specific diagonals
+#print(a)
+#print(b)
+
+## Exercise 30
+#a = np.zeros((4,4),int)
+#a[0::2,1::2]=1 ##[starting @ 0 access every 2nd element (row), starting at 1 access every 2nd element(col) ]
+#a[1::2,0::2]=1
+#print(a)
+
